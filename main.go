@@ -9,7 +9,6 @@ import (
 func main() {
 	port := flag.String("p", "8080", "Port to serve on.")
 	dir := flag.String("d", "./tmp", "the directory of static file to host")
-	flag.Parse()
 
 	fs := http.FileServer(http.Dir(*dir))
 
