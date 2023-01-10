@@ -13,7 +13,7 @@ func main() {
 	pwd, _ := os.Getwd()
 
 	port := flag.String("p", ":8080", "Port to serve on.")
-	dir := flag.String("d", "./tmp", "the directory of static file to host")
+	dir := flag.String("d", ".", "the directory of static file to host")
 	flag.Parse()
 
 	fs := http.FileServer(http.Dir(filepath.FromSlash(filepath.Join(pwd, *dir))))
